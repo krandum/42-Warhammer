@@ -1,0 +1,12 @@
+
+<- IUpkeep ----------------------------------------------------------------------
+The Upkeep interface is meant for objects that need to reset at the begining of
+every round, such as ships and weapons. This interface also provides a lot of
+options for expandability in the future.
+
+The interface has the following abstract method:
+
+void		function atUpKeep();
+This function will trigger all of the class-specific effects that need to be
+managed at the begining of the round.
+---------------------------------------------------------------------- IUpkeep ->

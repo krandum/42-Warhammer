@@ -1,0 +1,6 @@
+
+<- Bomber ----------------------------------------------------------------------
+The middle-child of the fleet, the bomber serves as the primary anti-scout ship,
+but suffers with extremely low handling because of it. A well positioned bomber
+can take out the entire enemy fleet!
+---------------------------------------------------------------------- Bomber ->

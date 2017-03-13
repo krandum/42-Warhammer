@@ -1,0 +1,20 @@
+
+<- Weapon ----------------------------------------------------------------------
+The Weapon class provides the architecture for ships to attack each other.
+
+Being an abstract class, Weapons tend to be more unique and as such a big role
+this class plays is in requiring the existance of these key functions.
+
+int			abstract public function shoot($x, $y);
+Shoot combines the capabilities of both checkRange and getDamage, allowing child
+classes to provide unique effects upon trigger.
+
+int			abstract public function checkRange( $x, $y );
+Checks whether or not the particular space is within range of the weapon, and if
+so determines how easily the attack would be to hit.
+
+int			protected function getDamage( $dc );
+According to a particular difficulty class, getDamage rolls all of the dice
+that have been stored on the weapon and gets the numeric value of how many
+of the rolls were hits.
+---------------------------------------------------------------------- Weapon ->

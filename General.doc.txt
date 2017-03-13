@@ -1,0 +1,7 @@
+
+<- General ----------------------------------------------------------------------
+The biggest of the ships, Generals are both powerful and vulnerable. While their
+single-target damage through their use of the nuke makes it hard to win a battle
+of attrition against it, the General's weakness is how easily it can be surrounded
+by smaller foes.
+---------------------------------------------------------------------- General ->

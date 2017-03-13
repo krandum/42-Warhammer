@@ -1,0 +1,13 @@
+
+<- Planet ----------------------------------------------------------------------
+Planets serve as obstacles to the world. As such, they use the Collidable
+trait, which specifies that the class poses a physical barrier in the map and that
+attempting to go through it will lead to damage being taken. In this case, that is
+42000 damage.
+
+Planets are instrinsically static. Because of this, the classs contains purely
+private variables which can be accessed via the use of getter methods.
+
+Planets are unlike most other Collidable classes in that their
+takeCollideDamage() function does not actually hinder them whatsoever.
+---------------------------------------------------------------------- Planet ->

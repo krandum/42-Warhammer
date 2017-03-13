@@ -1,0 +1,7 @@
+
+<- Scout ----------------------------------------------------------------------
+The smallest and most numerous of the ships, the scouts are the pieces that
+determine the battle. Highly maneuverable, scouts specialize and sneaking up to
+enemies and becoming stationary next to them, enabling their cannons to deal
+additional damage. Scouts are fragile but excel at fleeing once injured.
+---------------------------------------------------------------------- Scout ->

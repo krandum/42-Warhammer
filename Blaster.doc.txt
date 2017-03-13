@@ -1,0 +1,9 @@
+
+<- Blaster ----------------------------------------------------------------------
+The simplest of weapons (and currently the only fully implemented one), the
+blaster is a general purpose low damage low cost weapon meant to provide the
+majority to of the reliable damage your army can provide.
+
+This Class does not provide any additional functions on top of the Weapon
+abstractions.
+---------------------------------------------------------------------- Blaster ->

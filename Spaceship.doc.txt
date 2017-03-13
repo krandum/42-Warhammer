@@ -1,0 +1,26 @@
+
+<- Spaceship ----------------------------------------------------------------------
+The Spaceship class is the most extensive class in this game. It provides all
+the tools necessary for the scripts to be able to simply call some functions and
+look into some variables in order to run the entirety of the game. Because of this
+it is quite lengthy.
+
+Spaceship implements IUpkeep and uses two traits: Collidable and Damageable.
+
+Collidable provides a platform for all objects in the game to check whether or not
+there is another object in any square, provided that each of these objects give
+it the tools it will need need in order to probe each of these objects.
+
+Damageable provides a much simpler platform for objects that can suffer damage to
+deal and take damage with much fewer function calls, taking advantage of the
+Weapon infrastructure.
+
+Spaceship provides the following additional methods:
+
+int 		public final function move( $amount);
+Attempts to move in a direction and triggers an abrubt stop if an obstacle is
+found.
+
+void		public final function turn( $mod );
+Turns the ship, making the necessary calculations.
+---------------------------------------------------------------------- Spaceship ->
