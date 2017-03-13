@@ -70,6 +70,9 @@
 		$pathname = $_SESSION['filepath'] . "/private/";
 		$filename = 'queue';
 		$bq = battle_queue_connect();
+		$opponent = $bq[$login]['match'];
+		if ($opponent !== '-1' && $opponent == $bq[$opponent]['match']) 
+			unset($bq[$opponent]);
 		unset($bq[$login]);
 		return (file_put_contents("$pathname$filename", serialize($bq)));
 	}
@@ -87,6 +90,7 @@
 				$bq[$user]['match'] = $opponent;
 				$bq[$opponent]['match_id'] = $bq[$user]['time'] . $user . $opponent;
 				$bq[$user]['match_id'] = $bq[$opponent]['match_id'];
+				print_r ($bq);
 				$_SESSION['fleet_size'] = $bq[$user]['fleet']; // 500, 1500, 3000
 				$_SESSION['first'] = '1'; // 1
 				$_SESSION['faction'] = $bq[$user]['faction']; // red, blue, green
@@ -106,14 +110,15 @@
 		$bq = battle_queue_connect();
         if ($bq[$user]['match'] != '-1') 
         {
-        		$_SESSION['fleet_size'] = $bq[$user]['fleet']; // 500, 1500, 3000
+    		$_SESSION['fleet_size'] = $bq[$user]['fleet']; // 500, 1500, 3000
+			if ($_SESSION['first'] !== '1')	
 				$_SESSION['first'] = '0'; // 0
-				$_SESSION['faction'] = $bq[$user]['faction']; // red, blue, green
-				$_SESSION['other_sess'] = $bq[$bq[$user]['match']]['session']; // cookie value
-				$_SESSION['other_login'] = $bq[$user]['match']; // match value
-				$_SESSION['login'] = $user; // username
-				$_SESSION['other_faction'] = $bq[$bq[$user]['match']]['faction'];
-				return (TRUE);
+			$_SESSION['faction'] = $bq[$user]['faction']; // red, blue, green
+			$_SESSION['other_sess'] = $bq[$bq[$user]['match']]['session']; // cookie value
+			$_SESSION['other_login'] = $bq[$user]['match']; // match value
+			$_SESSION['login'] = $user; // username
+			$_SESSION['other_faction'] = $bq[$bq[$user]['match']]['faction'];
+			return (TRUE);
         }
         return (FALSE);
     }
